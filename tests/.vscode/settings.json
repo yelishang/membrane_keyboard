@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "hal_pal_lld.h": "c",
+        "stdbool.h": "c",
+        "keymap.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
