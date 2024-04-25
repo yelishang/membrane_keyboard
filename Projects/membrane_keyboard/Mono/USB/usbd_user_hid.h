@@ -26,7 +26,7 @@
 #define USBD_HID_NKRO_IN_REPORT_SIZE        16
 #define USBD_HID_MOUSE_IN_REPORT_SIZE       8
 #define USBD_HID_CONSUMER_IN_REPORT_SIZE    3
-
+#define USBD_HID_SYSTEM_IN_REPORT_SIZE    3
 enum usbd_hid_report_ids
 {
   USBD_REPORT_ID_MOUSE = 1,
@@ -38,6 +38,7 @@ enum usbd_hid_report_ids
 
 extern uint8_t hid_keyboard_in_report_buf[USBD_HID_KEYBOARD_IN_REPORT_SIZE];
 extern uint8_t hid_nkro_in_report_buf[USBD_HID_NKRO_IN_REPORT_SIZE];
+extern uint8_t hid_system_in_report_buf[USBD_HID_SYSTEM_IN_REPORT_SIZE];
 extern uint8_t hid_customer_in_report_buf[USBD_HID_CONSUMER_IN_REPORT_SIZE];
 
 

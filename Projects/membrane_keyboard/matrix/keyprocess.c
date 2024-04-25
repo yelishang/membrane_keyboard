@@ -130,8 +130,8 @@ uint8_t usbd_report_send(uint8_t ep, uint8_t *report)
           {
             case USBD_REPORT_ID_SYSTEM:
             {
-              memcpy(hid_customer_in_report_buf, report, USBD_HID_CONSUMER_IN_REPORT_SIZE);
-              USBD_HW_Transmit(ep, hid_customer_in_report_buf, USBD_HID_CONSUMER_IN_REPORT_SIZE);
+              memcpy(hid_system_in_report_buf, report, USBD_HID_CONSUMER_IN_REPORT_SIZE);
+              USBD_HW_Transmit(ep, hid_system_in_report_buf, USBD_HID_CONSUMER_IN_REPORT_SIZE);
               hid_ep2_in_xfer_flag = 1;
               error = 0;
             }
@@ -156,6 +156,8 @@ uint8_t usbd_report_send(uint8_t ep, uint8_t *report)
               error = 1;
               break;
           }
+        } else {
+          error = 1;
         }
       }
       break;
@@ -169,7 +171,6 @@ uint8_t usbd_report_send(uint8_t ep, uint8_t *report)
 void report_send(void) {
  uint8_t *report_buf = NULL;
  uint8_t ep = 0;
- uint32_t rev = 0;
  if (memcmp(usbd_keyboard_report_buf, hid_keyboard_in_report_buf, sizeof(hid_keyboard_in_report_buf)) != 0)
  {
    report_buf = usbd_keyboard_report_buf;
@@ -180,7 +181,7 @@ void report_send(void) {
    report_buf = usbd_consumer_report_buf;
    ep = 0x82;
  }
- else if (memcmp(usbd_system_report_buf, hid_nkro_in_report_buf, sizeof(usbd_system_report_buf)) != 0)
+ else if (memcmp(usbd_system_report_buf, hid_system_in_report_buf, sizeof(usbd_system_report_buf)) != 0)
  {
    report_buf = usbd_system_report_buf;
    ep = 0x82;
@@ -190,13 +191,11 @@ void report_send(void) {
    report_buf = usbd_nkro_report_buf;
    ep = 0x82;
  }
- 
+
   if (report_buf != NULL)
   {
     xSemaphoreTake(xMutexUsb, portMAX_DELAY);
-    while(usbd_report_send(ep, report_buf) && rev < USBD_HID_RETRY_SIZE) {
-      rev++;
-    }
+    while(usbd_report_send(ep, report_buf));
     xSemaphoreGive(xMutexUsb);
   }
 }

@@ -1,0 +1,13 @@
+.\objects\timer.o: ..\matrix\timer.c
+.\objects\timer.o: ..\matrix\timer.h
+.\objects\timer.o: C:\Keil\Keil_v523\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h
+.\objects\timer.o: C:\Keil\Keil_v523\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\timer.o: .\FreeRTOSConfig.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\task.h
+.\objects\timer.o: ..\..\..\ThirdParty\FreeRTOS\Source\include\list.h

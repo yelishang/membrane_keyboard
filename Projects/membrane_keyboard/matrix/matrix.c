@@ -299,7 +299,6 @@ uint8_t matrix_scan(void) {
     }
 #endif
     bool changed = memcmp(curr_matrix, curr_matrix2, sizeof(curr_matrix));
-//    bool changed = false;
     if (!changed)  {
       changed = memcmp(raw_matrix, curr_matrix, sizeof(curr_matrix)) != 0;
       if (changed) memcpy(raw_matrix, curr_matrix, sizeof(curr_matrix));
@@ -422,7 +421,6 @@ bool matrix_task(void) {
         for (uint8_t col = 0; col < MATRIX_COLS; col++, col_mask <<= 1) {
             if (row_changes & col_mask) {
               function_counter.function_counter_s.key_pressed = (current_row & col_mask) > 0 ?1 :0 ;
-
                 if (process_keypress) {
                       evtbuf[0] = col;
                       evtbuf[1] = row;
@@ -430,9 +428,6 @@ bool matrix_task(void) {
                       xQueueSend(xQueueAppEventMsg, evtbuf, 0);
                       xTaskNotify(APPTask_Handler, 0x01, eSetBits);
                 }
-              #ifdef LED_MATRIX 
-                process_led_matrix(row, col, key_pressed);
-              #endif 
             }
         }
 

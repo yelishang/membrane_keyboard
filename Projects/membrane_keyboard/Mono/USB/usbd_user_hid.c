@@ -3,7 +3,9 @@
 #include "usbd_user_hid.h"
 
 uint8_t hid_customer_in_report_buf[USBD_HID_CONSUMER_IN_REPORT_SIZE] = {0};
+uint8_t hid_system_in_report_buf[USBD_HID_SYSTEM_IN_REPORT_SIZE] = {0};
 uint8_t hid_nkro_in_report_buf[USBD_HID_NKRO_IN_REPORT_SIZE] = {0};
+
 
 volatile uint32_t reset_flag;
 uint8_t hid_report_buf[64]    = {0};

@@ -53,8 +53,8 @@ void USBD_User_DeInit(void)
 void USBD_User_Connect(void)
 {
   RCC->APBENR |= RCC_APBENR_GPIOEN;
-  GPIO_Init(GPIOD, GPIO_Pin_1 |GPIO_Pin_2, GPIO_MODE_AF | GPIO_AF1);
-
+  GPIO_Init(GPIOD, GPIO_Pin_1 |GPIO_Pin_2, GPIO_MODE_AF | GPIO_SPEED_HIGH | GPIO_AF1);
+  GPIOD->ODR |= (GPIO_Pin_1 |GPIO_Pin_2);
   USB->POWER = USB_POWER_SUSEN;
   USB->INTRUSBE = USB_INTRUSBE_RSTIE | USB_INTRUSBE_RSUIE | USB_INTRUSBE_SUSIE;
 }
@@ -99,11 +99,11 @@ extern void led_set_close(void);
 void USBD_User_Suspend(void)
 {
   led_set_close();
-  
-  RCC->SYSCLKPRE1 = 0x00;
-  RCC->SYSCLKSRC = RCC_SYSCLKSRC_HSI2;
-  RCC->SYSCLKUEN = RCC_SYSCLKUEN_ENA;
-  
+//  
+//  RCC->SYSCLKPRE1 = 0x00;
+//  RCC->SYSCLKSRC = RCC_SYSCLKSRC_HSI2;
+//  RCC->SYSCLKUEN = RCC_SYSCLKUEN_ENA;
+//  
 //  vTaskDelay(100);   // delay 100ms
 //  // Unlocks write to ANCTL registers
 //  PWR->ANAKEY1 = 0x03;
