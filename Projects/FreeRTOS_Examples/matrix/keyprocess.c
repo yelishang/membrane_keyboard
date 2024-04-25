@@ -4,6 +4,9 @@
 #include "keycode.h"
 #include "main.h"
 
+#include "usbd_core.h"
+#include "usbd_user_hid.h"
+
 #define USBD_HID_KEYBOARD_IN_REPORT_SIZE 8
 #define USBD_HID_NKRO_IN_REPORT_SIZE     16
 #define USBD_HID_CONSUMER_IN_REPORT_SIZE 3
@@ -21,7 +24,6 @@ static uint16_t       last_system_usage   = 0;
 
 void process_key(keycode_t keycode, bool pressed)
 {
-  static uint16_t key_num = 0;
   if (pressed) {
     int i;
     for (i = 2; i < 8; i++) {
@@ -29,22 +31,16 @@ void process_key(keycode_t keycode, bool pressed)
         break;
       if (usbd_keyboard_report_buf[i] == 0x00)
       {
-//        if (key_num > 2 && (keycode.base > KC_F1) && (keycode.base < KC_F12)) {
-//          break;
-//        } 
-        key_num ++;
         usbd_keyboard_report_buf[i] = keycode.base;
         break;
       }
     }
     
     if (i == 8) {
-      key_num ++;
       usbd_nkro_report_buf[0] = USBD_REPORT_ID_NKRO;
       usbd_nkro_report_buf[2 + (keycode.base / 8)] |= (0x01 << (keycode.base % 8));
     }
   } else {
-      key_num --;
       for (int i = 2; i < 8; i++) {
         if (usbd_keyboard_report_buf[i] == keycode.base)
         {
@@ -56,12 +52,6 @@ void process_key(keycode_t keycode, bool pressed)
       usbd_nkro_report_buf[0] = USBD_REPORT_ID_NKRO;
       usbd_nkro_report_buf[2 + (keycode.base / 8)] &= ~(0x01 << (keycode.base % 8));
   }
-}
-
-void lift_all_keys(void) {
-  memset (usbd_keyboard_report_buf, 0x0, sizeof(usbd_keyboard_report_buf));
-  memset (usbd_nkro_report_buf, 0x0, sizeof(usbd_nkro_report_buf));
-  usbd_nkro_report_buf[0] = USBD_REPORT_ID_NKRO;
 }
 
 void process_customer(keycode_t keycode, bool pressed) {

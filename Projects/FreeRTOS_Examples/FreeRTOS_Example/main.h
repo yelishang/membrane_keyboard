@@ -2,24 +2,15 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
-
-#include "usbd_core.h"
-#include "usbd_user_hid.h"
+#include "semphr.h"
 
 #include "matrix.h"
 #include "config.h"
 
-#include "semphr.h"
 #include "timer.h"
-#include "task_usb.h"
-#include "task_app.h"
 #include "keycode.h"
-
-#include "drv_key_led.h"
-
 #include "keyprocess.h"
 
-#include "eeconfig.h"
 extern volatile SemaphoreHandle_t xMutexUsb;
 
 extern volatile QueueHandle_t xQueueAppEventMsg;

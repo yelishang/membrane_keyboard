@@ -157,6 +157,12 @@ void led_init_pins(void) {
   setPinOutput_writeLow(A5);
 }
 
+void led_set_close(void) {
+  setPinOutput_writeLow(A10);
+  setPinOutput_writeHigh(B10);
+  setPinOutput_writeLow(A5);
+}
+
 __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row) {
     // Start with a clear matrix row
     matrix_row_t current_row_value = 0;
@@ -325,7 +331,7 @@ matrix_row_t matrix_get_row(uint8_t row) {
 
 
 uint16_t keycode_at_keymap_location_raw(uint8_t layer_num, uint8_t row, uint8_t column) {
-    if (layer_num < 1 && row < MATRIX_ROWS && column < MATRIX_COLS) {
+    if (layer_num < NUM_KEYMAP_LAYERS_RAW && row < MATRIX_ROWS && column < MATRIX_COLS) {
         return keymaps[layer_num][row][column];
     }
     return KC_TRNS;

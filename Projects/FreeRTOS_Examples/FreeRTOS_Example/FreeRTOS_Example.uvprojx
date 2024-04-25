@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\Libraries\CMSIS\Include;..\..\..\ThirdParty\FreeRTOS\Source\include;..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0;.;..\..\..\Libraries\Mono_StdPeriph_Driver\inc;..\..\..\Libraries\CMSIS\Device\WB\mono;..\..\Template;..\matrix;..\Hal;..\Mono\GPIO;..\..\..\Libraries\Mono_USBDevice_Driver\inc;..\Keyboards\wk104_cs;..\drv_key_led;..\Flash;..\RTT</IncludePath>
+              <IncludePath>..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0;..\..\..\ThirdParty\FreeRTOS\Source\include;..\..\..\Libraries\Mono_USBDevice_Driver\inc;..\..\..\Libraries\Mono_StdPeriph_Driver\inc;..\..\..\Libraries\CMSIS\Device\WB\mono;..\..\..\Libraries\CMSIS\Include;..\Keyboards\wk104_cs;..\Mono\GPIO;..\Mono\USB;..\..\Template;..\matrix;..\RTT;.</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -399,26 +399,6 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
-            <File>
-              <FileName>usbd_hid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\usbd_hid.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_user.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\usbd_user.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_user_desc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\usbd_user_desc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_user_hid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\usbd_user_hid.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -428,6 +408,26 @@
               <FileName>hal_pal_lld.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Mono\GPIO\hal_pal_lld.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mono\USB\usbd_hid.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_user.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mono\USB\usbd_user.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_user_desc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mono\USB\usbd_user_desc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_user_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mono\USB\usbd_user_hid.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -577,45 +577,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Hal</GroupName>
-        </Group>
-        <Group>
-          <GroupName>Led</GroupName>
-          <Files>
-            <File>
-              <FileName>drv_key_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\drv_key_led\drv_key_led.c</FilePath>
-            </File>
-            <File>
-              <FileName>rgb_matrix.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\drv_key_led\rgb_matrix.c</FilePath>
-            </File>
-            <File>
-              <FileName>led_arithmetic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\drv_key_led\led_arithmetic.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Keyboads</GroupName>
           <Files>
             <File>
               <FileName>keymap.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Keyboards\wk104_cs\keymap.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Flash</GroupName>
-          <Files>
-            <File>
-              <FileName>legacy_flash_ops.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Flash\legacy_flash_ops.c</FilePath>
             </File>
           </Files>
         </Group>

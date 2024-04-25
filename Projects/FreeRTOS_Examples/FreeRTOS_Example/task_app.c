@@ -1,6 +1,9 @@
 #include "task_app.h"
 #include "main.h"
 
+#include "usbd_core.h"
+#include "usbd_user_hid.h"
+
 extern const uint16_t keymaps[1][MATRIX_ROWS][MATRIX_COLS];
 
 #define pgm_read_word(address_short) *((uint16_t *)(address_short))
@@ -13,7 +16,7 @@ static keyevent_t func = {.pressed = false};
 
 uint16_t keymap_key_to_keycode(uint8_t layer, keypos_t key)
 {
-  if ((key.row < MATRIX_ROWS) && (key.col < MATRIX_COLS) && (layer < 2))
+  if ((key.row < MATRIX_ROWS) && (key.col < MATRIX_COLS) && (layer < NUM_KEYMAP_LAYERS_RAW))
   {
     return pgm_read_word(&keymaps[layer][key.row][key.col]);
   }
@@ -70,11 +73,10 @@ void action_key_pressed(keycode_t keycode, keyevent_t event) {
   
 
 }
-          keyevent_t event;
+
 void APPTask(void *pvParameters) {
-  static uint32_t buff = 0;
-  bool flag = 1;
   BaseType_t xResult;
+  keyevent_t event;
   uint32_t ulNotifiedValue;
   function_counter_t function_counter;
   while (1)
@@ -106,7 +108,30 @@ void APPTask(void *pvParameters) {
               action_key_pressed(action.keycode, event);
             }
 
+          if (UsbdCoreInfo.DeviceState == USBD_STATE_SUSPENDED)
+          {
+            PWR->ANAKEY1 = 0x03;
+            PWR->ANAKEY2 = 0x0C;
+            ANCTL->HSI48ENR = 0x01;
+            while((ANCTL->HSI48SR & 0x01) == 0);
+            
+            RCC->SYSCLKPRE1 = 0x00;
+            RCC->SYSCLKSRC = RCC_SYSCLKSRC_HSI48;
+            RCC->SYSCLKUEN = RCC_SYSCLKUEN_ENA;
+            __disable_irq();
+            if (UsbdCoreInfo.RemoteWakeup != 0)
+            {
+              /* Remote Wakeup */
+              USB->POWER |= USB_POWER_RESUME;
+              vTaskDelay(10);   // delay 10ms
+              USB->POWER &= ~USB_POWER_RESUME;
+              USBD_Core_Resume();
+            }
+          __enable_irq();
+          }
+          
           report_send();
+          
         }
       }
     }

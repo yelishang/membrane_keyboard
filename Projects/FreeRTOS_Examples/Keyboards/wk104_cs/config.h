@@ -1,8 +1,5 @@
 #pragma once
 
-//#define SINK_ROW_PINS \
-//    {C4, C5, C2, C3, C1, C0}
-
 #define MATRIX_ROW_PINS \
     {A1, A2, A4, A6, A7, B0, B3, B5}
 #define MATRIX_COL_PINS \
@@ -18,6 +15,8 @@
     
 #define DIODE_DIRECTION COL2ROW
 
+#define NUM_KEYMAP_LAYERS_RAW 2
+    
 #define LAYOUT( \
  k4b, k1a, k19, k69, k49, k0h, k45, k62, k12, k13, k03, k43, k23,        k4h, k5h, k6h,                       \
  k1b, k0b, k0a, k09, k07, k17, k16, k06, k05, k02, k04, k14, k15, k63,   k1d, k1c, k1e,    k30, k3d, k3e, k2e,\
@@ -39,53 +38,7 @@
 
 extern const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 
-typedef struct  {
-    uint8_t x;
-    uint8_t y;
-} led_point_t;
-
-typedef struct  {
-    uint8_t     matrix_co[MATRIX_ROWS][MATRIX_COLS];
-    led_point_t point[LED_MATRIX_LED_COUNT];
-    uint8_t     flags[LED_MATRIX_LED_COUNT];
-} led_config_t;
-
-typedef struct  {
-    led_point_t location[LED_MATRIX_LED_COUNT];
-} led_config_m;
-
-extern const led_config_t g_led_config;
-
-
 enum im_keys {
   IM_TOFN = 0x7E00
 };
-
-
-#define LED_MATRIX_KEYREACTIVE_ENABLED
-
-#define ENABLE_LED_MATRIX_ALPHAS_MODS
-#define ENABLE_LED_MATRIX_BREATHING
-#define ENABLE_LED_MATRIX_BAND
-#define ENABLE_LED_MATRIX_BAND_PINWHEEL
-#define ENABLE_LED_MATRIX_BAND_SPIRAL
-#define ENABLE_LED_MATRIX_CYCLE_LEFT_RIGHT
-#define ENABLE_LED_MATRIX_CYCLE_UP_DOWN
-#define ENABLE_LED_MATRIX_CYCLE_OUT_IN
-#define ENABLE_LED_MATRIX_DUAL_BEACON
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_SIMPLE
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_WIDE
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTIWIDE
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_CROSS
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTICROSS
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_NEXUS
-#define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTINEXUS
-#define ENABLE_LED_MATRIX_SOLID_SPLASH
-#define ENABLE_LED_MATRIX_SOLID_MULTISPLASH
-#define ENABLE_LED_MATRIX_WAVE_LEFT_RIGHT
-#define ENABLE_LED_MATRIX_WAVE_UP_DOWN
-
-
-
-
 
