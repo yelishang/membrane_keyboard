@@ -1,741 +1,0 @@
-Dependencies for Project 'membrane_keyboard', Target 'Target 1': (DO NOT MODIFY !)
-F (..\..\..\Libraries\CMSIS\Device\WB\mono\startup\arm\startup_mono.s)(0x66261D65)(--cpu Cortex-M0 --li -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "ARMCM0 SETA 1"--list .\listings\startup_mono.lst --xref -o .\objects\startup_mono.o --depend .\objects\startup_mono.d)
-F (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.c)(0x662A03D6)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\system_mono.o --omf_browse .\objects\system_mono.crf --depend .\objects\system_mono.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (.\main.c)(0x6629F5C8)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\matrix\keyprocess.h)(0x6629E945)
-I (task_app.h)(0x661CF9A0)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-F (..\Mono\GPIO\hal_pal_lld.c)(0x661C97B0)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\hal_pal_lld.o --omf_browse .\objects\hal_pal_lld.crf --depend .\objects\hal_pal_lld.d)
-I (..\Mono\GPIO\hal_pal_lld.h)(0x6618FA46)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\Mono\USB\usbd_hid.c)(0x6604D225)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_hid.o --omf_browse .\objects\usbd_hid.crf --depend .\objects\usbd_hid.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_hid.h)(0x6604D225)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-I (..\Mono\USB\usbd_user.h)(0x6604D225)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-F (..\Mono\USB\usbd_user.c)(0x662A1A72)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_user.o --omf_browse .\objects\usbd_user.crf --depend .\objects\usbd_user.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\Mono\USB\usbd_user.h)(0x6604D225)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_hid.h)(0x6604D225)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-F (..\Mono\USB\usbd_user_desc.c)(0x6629BF24)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_user_desc.o --omf_browse .\objects\usbd_user_desc.crf --depend .\objects\usbd_user_desc.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-F (..\Mono\USB\usbd_user_hid.c)(0x662A0CEC)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_user_hid.o --omf_browse .\objects\usbd_user_hid.crf --depend .\objects\usbd_user_hid.d)
-I (.\main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\matrix\keyprocess.h)(0x6629E945)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-F (..\matrix\matrix.c)(0x662A05E2)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\matrix.o --omf_browse .\objects\matrix.crf --depend .\objects\matrix.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\Mono\GPIO\bsp_pin_defs.h)(0x661F2B29)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\Mono\GPIO\hal_pal_lld.h)(0x6618FA46)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\matrix\keyprocess.h)(0x6629E945)
-F (..\matrix\debonce.c)(0x661CCE3C)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\debonce.o --omf_browse .\objects\debonce.crf --depend .\objects\debonce.d)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (..\matrix\timer.c)(0x6618D840)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
-I (..\matrix\timer.h)(0x6618D649)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-F (..\matrix\keyprocess.c)(0x662A13BC)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\keyprocess.o --omf_browse .\objects\keyprocess.crf --depend .\objects\keyprocess.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\matrix\keyprocess.h)(0x6629E945)
-I (.\main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-F (.\task_usb.c)(0x6629F584)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\task_usb.o --omf_browse .\objects\task_usb.crf --depend .\objects\task_usb.d)
-I (task_usb.h)(0x661CEBCF)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-I (main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\matrix\keyprocess.h)(0x6629E945)
-F (.\task_app.c)(0x6629F803)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\task_app.o --omf_browse .\objects\task_app.crf --depend .\objects\task_app.d)
-I (task_app.h)(0x661CF9A0)
-I (main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\matrix\keyprocess.h)(0x6629E945)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user_hid.h)(0x662A0D5F)
-I (..\Mono\USB\usb_hid_def.h)(0x6604D225)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_crc.c)(0x6617A24D)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_crc.o --omf_browse .\objects\mono_crc.crf --depend .\objects\mono_crc.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_exti.c)(0x6617A24D)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_exti.o --omf_browse .\objects\mono_exti.crf --depend .\objects\mono_exti.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_flash.c)(0x6617A24D)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_flash.o --omf_browse .\objects\mono_flash.crf --depend .\objects\mono_flash.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_gpio.c)(0x6618F36D)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_gpio.o --omf_browse .\objects\mono_gpio.crf --depend .\objects\mono_gpio.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_iwdg.c)(0x6617A24D)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_iwdg.o --omf_browse .\objects\mono_iwdg.crf --depend .\objects\mono_iwdg.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_rtc.c)(0x6617A24E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_rtc.o --omf_browse .\objects\mono_rtc.crf --depend .\objects\mono_rtc.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_StdPeriph_Driver\src\mono_spim.c)(0x6617A24E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\mono_spim.o --omf_browse .\objects\mono_spim.crf --depend .\objects\mono_spim.d)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-F (..\..\..\Libraries\Mono_USBDevice_Driver\src\usbd_core.c)(0x6617A24E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_core.o --omf_browse .\objects\usbd_core.crf --depend .\objects\usbd_core.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user.h)(0x6604D225)
-F (..\..\..\Libraries\Mono_USBDevice_Driver\src\usbd_hw.c)(0x6617A24E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_hw.o --omf_browse .\objects\usbd_hw.crf --depend .\objects\usbd_hw.d)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-F (..\..\..\Libraries\Mono_USBDevice_Driver\src\usbd_intr.c)(0x6617A24E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\usbd_intr.o --omf_browse .\objects\usbd_intr.crf --depend .\objects\usbd_intr.d)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_core.h)(0x6617A24E)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usb_def.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_USBDevice_Driver\inc\usbd_hw.h)(0x6617A24E)
-I (..\Mono\USB\usbd_user.h)(0x6604D225)
-F (..\..\..\ThirdParty\FreeRTOS\Source\croutine.c)(0x5F1BEC15)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\croutine.o --omf_browse .\objects\croutine.crf --depend .\objects\croutine.d)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\croutine.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\event_groups.c)(0x5F1BEC0B)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\event_groups.o --omf_browse .\objects\event_groups.crf --depend .\objects\event_groups.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\timers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\event_groups.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\list.c)(0x66189173)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\queue.c)(0x66189173)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\queue.o --omf_browse .\objects\queue.crf --depend .\objects\queue.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\stream_buffer.c)(0x6618914E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\stream_buffer.o --omf_browse .\objects\stream_buffer.crf --depend .\objects\stream_buffer.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\stream_buffer.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\tasks.c)(0x661C7E12)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\tasks.o --omf_browse .\objects\tasks.crf --depend .\objects\tasks.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\timers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\stack_macros.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\timers.c)(0x6618914E)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\timers.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\portable\MemMang\heap_4.c)(0x5F1BEC0C)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\heap_4.o --omf_browse .\objects\heap_4.crf --depend .\objects\heap_4.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-F (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\port.c)(0x66189173)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-F (..\Keyboards\wk104_cs\keymap.c)(0x6629F6F0)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\keymap.o --omf_browse .\objects\keymap.crf --depend .\objects\keymap.d)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\matrix\keycode.h)(0x6628D0EE)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\mono.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\core_cm0.h)(0x6617A24D)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x6617A24D)
-I (..\..\..\Libraries\CMSIS\Device\WB\mono\system_mono.h)(0x6617A24D)
-I (..\..\Template\mono_conf.h)(0x6617A24E)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_crc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_exti.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_flash.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_gpio.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_iwdg.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_rtc.h)(0x6617A24D)
-I (..\..\..\Libraries\Mono_StdPeriph_Driver\inc\mono_spim.h)(0x6617A24D)
-I (.\main.h)(0x6629F5EB)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\FreeRTOS.h)(0x661C8730)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (.\FreeRTOSConfig.h)(0x66278E9D)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\projdefs.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\portable.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\deprecated_definitions.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h)(0x66189173)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\mpu_wrappers.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\task.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\list.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\queue.h)(0x5F1BEC0B)
-I (..\..\..\ThirdParty\FreeRTOS\Source\include\semphr.h)(0x5F1BEC0B)
-I (..\matrix\matrix.h)(0x66274C7B)
-I (..\Mono\GPIO\gpio.h)(0x661899A8)
-I (..\matrix\debonce.h)(0x6618C671)
-I (..\Keyboards\wk104_cs\config.h)(0x6629F893)
-I (..\matrix\timer.h)(0x6618D649)
-I (..\matrix\keyprocess.h)(0x6629E945)
-F (..\RTT\SEGGER_RTT.c)(0x58C108C4)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\segger_rtt.o --omf_browse .\objects\segger_rtt.crf --depend .\objects\segger_rtt.d)
-I (..\RTT\SEGGER_RTT.h)(0x58C108C4)
-I (..\RTT\SEGGER_RTT_Conf.h)(0x58C108C4)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\RTT\SEGGER_RTT_printf.c)(0x58C108C4)(--c99 -c --cpu Cortex-M0 --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\ThirdParty\FreeRTOS\Source\portable\RVDS\ARM_CM0 -I ..\..\..\ThirdParty\FreeRTOS\Source\include -I ..\..\..\Libraries\Mono_USBDevice_Driver\inc -I ..\..\..\Libraries\Mono_StdPeriph_Driver\inc -I ..\..\..\Libraries\CMSIS\Device\WB\mono -I ..\..\..\Libraries\CMSIS\Include -I ..\Keyboards\wk104_cs -I ..\Mono\GPIO -I ..\Mono\USB -I ..\..\Template -I ..\matrix -I ..\RTT -I .-I.\RTE\_Target_1-IC:\Keil\Keil_v523\ARM\PACK\ARM\CMSIS\5.1.1\Device\ARM\ARMCM0\Include-IC:\Keil\Keil_v523\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DUSE_STDPERIPH_DRIVER-o .\objects\segger_rtt_printf.o --omf_browse .\objects\segger_rtt_printf.crf --depend .\objects\segger_rtt_printf.d)
-I (..\RTT\SEGGER_RTT.h)(0x58C108C4)
-I (..\RTT\SEGGER_RTT_Conf.h)(0x58C108C4)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (C:\Keil\Keil_v523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)

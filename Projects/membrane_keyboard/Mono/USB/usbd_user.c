@@ -80,8 +80,7 @@ void USBD_User_Reset(void)
   hid_ep2_in_xfer_flag = 0;
   hid_ep1_in_xfer_flag = 0;
 }
-#include "FreeRTOS.h"
-#include "task.h"
+
 /**
  * @brief  USB Resume Event Service Routine.
  * @return None
@@ -99,16 +98,6 @@ extern void led_set_close(void);
 void USBD_User_Suspend(void)
 {
   led_set_close();
-//  
-//  RCC->SYSCLKPRE1 = 0x00;
-//  RCC->SYSCLKSRC = RCC_SYSCLKSRC_HSI2;
-//  RCC->SYSCLKUEN = RCC_SYSCLKUEN_ENA;
-//  
-//  vTaskDelay(100);   // delay 100ms
-//  // Unlocks write to ANCTL registers
-//  PWR->ANAKEY1 = 0x03;
-//  PWR->ANAKEY2 = 0x0C;
-//  ANCTL->HSI48ENR = 0x00;
 }
 
 /**

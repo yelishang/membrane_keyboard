@@ -1,9 +1,0 @@
-.\objects\debonce.o: ..\matrix\debonce.c
-.\objects\debonce.o: ..\matrix\matrix.h
-.\objects\debonce.o: C:\Keil\Keil_v523\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\debonce.o: C:\Keil\Keil_v523\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\debonce.o: ..\Mono\GPIO\gpio.h
-.\objects\debonce.o: ..\matrix\debonce.h
-.\objects\debonce.o: ..\Keyboards\wk104_cs\config.h
-.\objects\debonce.o: ..\matrix\timer.h
-.\objects\debonce.o: C:\Keil\Keil_v523\ARM\ARMCC\Bin\..\include\stdlib.h
