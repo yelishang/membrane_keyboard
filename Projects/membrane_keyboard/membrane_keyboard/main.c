@@ -33,6 +33,88 @@ void bspInit()
   USBD_Connect();
 }
 
+static bool usbd_resume_flag = false;
+static uint8_t bsp_usbd_resume_signal_flag = 0;
+void bsp_usbd_resume(void) {
+
+    usbd_resume_flag = false;
+
+    PWR->ANAKEY1 = 0x03;
+    PWR->ANAKEY2 = 0x0C;
+
+    ANCTL->HSI48ENR = 0x01;
+    while ((ANCTL->HSI48SR & 0x01) == 0);
+    for (uint32_t i = 0; i < 10000; i++);
+
+    PWR->ANAKEY1 = 0x00;
+    PWR->ANAKEY2 = 0x00;
+
+    FLASH->ACR      = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY;
+    RCC->SYSCLKPRE1 = 0x00;
+    RCC->SYSCLKSRC  = RCC_SYSCLKSRC_HSI48;
+    RCC->SYSCLKUEN  = RCC_SYSCLKUEN_ENA;
+
+    SystemCoreClock = 48000000;
+}
+
+void bsp_usbd_suspend(void) {
+
+    RCC->SYSCLKPRE1 = 0x00;
+    RCC->SYSCLKSRC  = RCC_SYSCLKSRC_HSI2;
+    RCC->SYSCLKUEN  = RCC_SYSCLKUEN_ENA;
+    SystemCoreClock = 2000000;
+
+    EXTI_InitTypeDef EXTI_InitStructure;
+
+    PWR->ANAKEY1 = 0x03;
+    PWR->ANAKEY2 = 0x0C;
+
+    ANCTL->HSI48ENR = 0x00;
+    while ((ANCTL->HSI48SR & 0x01) != 0);
+    for (uint32_t i = 0; i < 10000; i++);
+
+    ANCTL->USBPDCR = 0x0F;
+
+    PWR->ANAKEY1 = 0x00;
+    PWR->ANAKEY2 = 0x00;
+
+    RCC->APBENR |= RCC_APBENR_EXTIEN;
+
+    EXTI_InitStructure.EXTI_Line    = EXTI_Line20;
+    EXTI_InitStructure.EXTI_Mode    = EXTI_Mode_Interrupt;
+    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    EXTI_Init(&EXTI_InitStructure);
+
+    bsp_usbd_resume_signal_flag = 0;
+
+    EXTI_ClearITPendingBit(EXTI_Line20);
+    NVIC_EnableIRQ(USBP_WKUP_IRQn);
+}
+
+void USBP_WKUP_IRQHandler(void) {
+    EXTI_ClearITPendingBit(EXTI_Line20);
+
+    if ((bsp_usbd_resume_signal_flag == 0) && (ANCTL->USBPDSR & ANCTL_USBPDSR_KSTAT)) {
+        bsp_usbd_resume_signal_flag = 1;
+    }
+    if ((bsp_usbd_resume_signal_flag == 1) && (ANCTL->USBPDSR & ANCTL_USBPDSR_SE0)) {
+        bsp_usbd_resume_signal_flag = 2;
+    }
+    if ((bsp_usbd_resume_signal_flag == 2) && (ANCTL->USBPDSR & ANCTL_USBPDSR_JSTAT)) {
+        bsp_usbd_resume_signal_flag = 3;
+        NVIC_DisableIRQ(USBP_WKUP_IRQn);
+
+        usbd_resume_flag = true;
+    }
+
+    if ((bsp_usbd_resume_signal_flag == 0) && (ANCTL->USBPDSR & ANCTL_USBPDSR_SE0)) {
+        NVIC_DisableIRQ(USBP_WKUP_IRQn);
+
+        usbd_resume_flag = true;
+    }
+}
+
 int main(void)
 {
   bspInit();
@@ -57,6 +139,9 @@ static void MatrixTask(void *pvParameters)
   while (1)
   {
     matrix_task();
+    if (usbd_resume_flag) {
+      bsp_usbd_resume();
+    }
   }
 }
 

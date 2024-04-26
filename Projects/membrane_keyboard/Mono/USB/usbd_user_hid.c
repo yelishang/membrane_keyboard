@@ -41,7 +41,7 @@ bool USBD_User_HID_GetReport(void)
 }
 
 uint8_t hid_keyboard_out_report_buf[1] = {0};
-extern void indicator_light(uint8_t temp);
+void indicator_light(uint8_t temp);
 bool USBD_User_HID_SetReport(bool data_received)
 {
   if ((UsbdCoreInfo.SetupPacket.wIndexL == USBD_HID_KEYBOARD_IF_NUM) &&

@@ -74,6 +74,8 @@ void action_key_pressed(keycode_t keycode, keyevent_t event) {
 
 }
 
+void bsp_usbd_resume(void);
+
 void APPTask(void *pvParameters) {
   BaseType_t xResult;
   keyevent_t event;
@@ -110,17 +112,10 @@ void APPTask(void *pvParameters) {
 
           if (UsbdCoreInfo.DeviceState == USBD_STATE_SUSPENDED)
           {
-            PWR->ANAKEY1 = 0x03;
-            PWR->ANAKEY2 = 0x0C;
-            ANCTL->HSI48ENR = 0x01;
-            while((ANCTL->HSI48SR & 0x01) == 0);
-            
-            RCC->SYSCLKPRE1 = 0x00;
-            RCC->SYSCLKSRC = RCC_SYSCLKSRC_HSI48;
-            RCC->SYSCLKUEN = RCC_SYSCLKUEN_ENA;
             __disable_irq();
             if (UsbdCoreInfo.RemoteWakeup != 0)
             {
+              bsp_usbd_resume();
               /* Remote Wakeup */
               USB->POWER |= USB_POWER_RESUME;
               vTaskDelay(10);   // delay 10ms

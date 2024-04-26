@@ -80,7 +80,8 @@ void USBD_User_Reset(void)
   hid_ep2_in_xfer_flag = 0;
   hid_ep1_in_xfer_flag = 0;
 }
-
+void indicator_light(uint8_t temp);
+extern uint8_t hid_keyboard_out_report_buf[1];
 /**
  * @brief  USB Resume Event Service Routine.
  * @return None
@@ -88,9 +89,12 @@ void USBD_User_Reset(void)
 void USBD_User_Resume(void)
 {
   // Unlocks write to ANCTL registers
+  indicator_light(hid_keyboard_out_report_buf[0]);
 }
 
-extern void led_set_close(void);
+void led_set_close(void);
+void bsp_usbd_suspend(void);
+
 /**
  * @brief  USB Suspend Event Service Routine.
  * @return None
@@ -98,6 +102,7 @@ extern void led_set_close(void);
 void USBD_User_Suspend(void)
 {
   led_set_close();
+  bsp_usbd_suspend();
 }
 
 /**
