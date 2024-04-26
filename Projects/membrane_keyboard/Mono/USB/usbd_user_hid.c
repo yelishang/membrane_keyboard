@@ -22,6 +22,8 @@ volatile int hid_ep2_in_xfer_flag = 0;
 uint8_t hid_keyboard_in_report_buf[USBD_HID_KEYBOARD_IN_REPORT_SIZE] = {0};
 volatile int hid_ep1_in_xfer_flag = 0;
 
+uint8_t hid_vendor_defined_feature_report_buf[511] = {0};
+volatile uint32_t reset_req = 0;
 bool USBD_User_HID_GetReport(void)
 {
   if ((UsbdCoreInfo.SetupPacket.wIndexL == USBD_HID_MIXED_IF_NUM) &&
@@ -60,6 +62,27 @@ bool USBD_User_HID_SetReport(bool data_received)
     }
   }
 
+  if ((UsbdCoreInfo.SetupPacket.wIndexL == USBD_HID_VENDOR_DEFINED_IF_NUM) &&
+      (UsbdCoreInfo.SetupPacket.wValueH == HID_REPORT_FEATURE) &&
+      (UsbdCoreInfo.SetupPacket.wLength == 511))
+  {
+    if (data_received == false)
+    {
+      UsbdCoreInfo.DataPtr = &hid_vendor_defined_feature_report_buf[0];
+      return true;
+    }
+    else
+    {
+      uint8_t *pdata = &hid_vendor_defined_feature_report_buf[0];
+      if (pdata[0] == 0xEA) {
+        reset_req = 0x5AA5A5A5;
+      }
+      else
+        return false;
+
+      return true;
+    }
+  }
   return false;
 }
 

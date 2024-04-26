@@ -112,7 +112,7 @@ void APPTask(void *pvParameters) {
 
           if (UsbdCoreInfo.DeviceState == USBD_STATE_SUSPENDED)
           {
-            __disable_irq();
+            xSemaphoreTake(xMutexUsb, portMAX_DELAY);
             if (UsbdCoreInfo.RemoteWakeup != 0)
             {
               bsp_usbd_resume();
@@ -122,7 +122,7 @@ void APPTask(void *pvParameters) {
               USB->POWER &= ~USB_POWER_RESUME;
               USBD_Core_Resume();
             }
-          __enable_irq();
+            xSemaphoreGive(xMutexUsb);
           }
           
           report_send();

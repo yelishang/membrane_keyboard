@@ -4,6 +4,7 @@
 #include <string.h>
 #include "main.h"
 #include "task_app.h"
+#include "task_usb.h"
 #include "usbd_core.h"
 #include "usbd_user_hid.h"
 
@@ -15,8 +16,12 @@
 /* Private function prototypes -----------------------------------------------*/
 #define MatrixTask_STACK_SIZE 90
 #define APPTask_STACK_SIZE 64
+#define USBTask_STACK_SIZE 32
+
 TaskHandle_t MatrixTask_Handler;
 TaskHandle_t APPTask_Handler;
+TaskHandle_t USBTask_Handler;
+
 static void MatrixTask(void *pvParameters);
 
 /* Private functions ---------------------------------------------------------*/
@@ -124,6 +129,7 @@ int main(void)
   xMutexUsb = xSemaphoreCreateMutex();
   xTaskCreate(MatrixTask, "Matrix", MatrixTask_STACK_SIZE, NULL, 1, &MatrixTask_Handler);
   xTaskCreate(APPTask, "APP", APPTask_STACK_SIZE, NULL, 3, &APPTask_Handler);
+  xTaskCreate(USBTask, "USB", USBTask_STACK_SIZE, NULL, 4, &USBTask_Handler);
   /* Start the scheduler. */
   vTaskStartScheduler();
 
@@ -140,7 +146,9 @@ static void MatrixTask(void *pvParameters)
   {
     matrix_task();
     if (usbd_resume_flag) {
+      xSemaphoreTake(xMutexUsb, portMAX_DELAY);
       bsp_usbd_resume();
+      xSemaphoreGive(xMutexUsb);
     }
   }
 }

@@ -194,9 +194,13 @@ void report_send(void) {
 
   if (report_buf != NULL)
   {
-    xSemaphoreTake(xMutexUsb, portMAX_DELAY);
-    while(usbd_report_send(ep, report_buf));
-    xSemaphoreGive(xMutexUsb);
+    uint8_t errcode = 0;
+    
+    do {
+      xSemaphoreTake(xMutexUsb, portMAX_DELAY);
+      errcode = usbd_report_send(ep, report_buf);
+      xSemaphoreGive(xMutexUsb);
+    } while (errcode);
   }
 }
 
