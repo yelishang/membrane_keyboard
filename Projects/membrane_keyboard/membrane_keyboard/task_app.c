@@ -73,6 +73,16 @@ void action_key_pressed(keycode_t keycode, keyevent_t event) {
   
 
 }
+__attribute__((weak)) bool process_record_kb(uint16_t keycode, keyevent_t event) {
+    return true;
+}
+
+bool process_record_quantum(uint16_t keycode, keyevent_t event) {
+  if (process_record_kb(keycode, event) && true) {
+    return true;
+  } 
+  return false;
+}
 
 void bsp_usbd_resume(void);
 
@@ -95,7 +105,7 @@ void APPTask(void *pvParameters) {
           event.pressed = function_counter.function_counter_s.key_pressed;
 
           action = keymap_key_to_action(event);
-
+          process_record_quantum(action.keycode.all ,event);
               if (action.layer != layer_state)
               {
                 func.key.row = event.key.row;

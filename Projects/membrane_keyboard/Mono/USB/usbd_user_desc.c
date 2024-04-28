@@ -3,9 +3,42 @@
 #include "usb_def.h"
 #include "usb_hid_def.h"
 #include "usbd_user_hid.h"
+#include "config.h"
 
+#define USBCONCAT(a, b) a##b
+#define USBSTR(s) USBCONCAT(L, s)
+
+#define STRING(x) #x         ///< stringify without expand
+#define XSTRING(x) STRING(x) ///< expand then stringify
 
 #define WBVAL(x)                          (x & 0xFF),((x >> 8) & 0xFF)
+
+typedef struct
+{
+  uint8_t Size;
+  uint8_t Type;
+  uint16_t UnicodeString[50];
+}  __attribute__ ((packed)) USB_Descriptor_String_t;
+
+
+typedef struct __PACKED
+{
+  uint8_t reserved;
+  char version[15];
+  uint16_t vid;
+  uint16_t pid;
+  char product[22];
+  char manufacturer[21];
+} kbinfo_t;
+
+kbinfo_t kbinfo __attribute__((at(0x08002000))) = {
+    .manufacturer = XSTRING(MANUFACTURER),
+    .product      = XSTRING(PRODUCT),
+    .version      = XSTRING(FW_VERSION),
+    .vid          = VENDOR_ID,
+    .pid          = PRODUCT_ID,
+};
+
 // clang-format off
 
 /*
@@ -231,9 +264,9 @@ const uint8_t USBD_DeviceDescriptor[] =
   0x00,                                 /* bDeviceProtocol */
 
   0x40,                                 /* bMaxPacketSize0 0x40 = 64 */
-  WBVAL(0x8888),                        /* idVendor */
-  WBVAL(0x5A42),                        /* idProduct */
-  WBVAL(0x0100),                        /* bcdDevice */
+  WBVAL(VENDOR_ID),                     /* idVendor */
+  WBVAL(PRODUCT_ID),                    /* idProduct */
+  WBVAL(DEVICE_VER),                    /* bcdDevice */
   1,                                    /* iManufacturer */
   2,                                    /* iProduct */
   0,                                    /* iSerialNumber */
@@ -364,29 +397,28 @@ const uint8_t USBD_StringDescriptor_LangID[4] =
   0x04
 }; /* LangID = 0x0409: U.S. English */
 
-const uint8_t USBD_StringDescriptor_Manufacturer[26] = 
+const USB_Descriptor_String_t USBD_StringDescriptor_Manufacturer = 
 {
-  26,                                                 /* bLength */
-  USB_DESC_TYPE_STRING,                               /* bDescriptorType */
+  .Size                   = sizeof(USBSTR(MANUFACTURER)),   /* bLength */
+  .Type                   = USB_DESC_TYPE_STRING,            /* bDescriptorType */
   /* Manufacturer: "Your Company" */
-  'Y', 0, 'o', 0, 'u', 0, 'r', 0, ' ', 0, 'C', 0, 'o', 0, 'm', 0,
-  'p', 0, 'a', 0, 'n', 0, 'y', 0
+  .UnicodeString          = USBSTR(MANUFACTURER)
 };
 
-const uint8_t USBD_StringDescriptor_Product[28] = 
+const USB_Descriptor_String_t USBD_StringDescriptor_Product = 
 {
-  28,                                                 /* bLength */
-  USB_DESC_TYPE_STRING,                               /* bDescriptorType */
+  .Size                   = sizeof(USBSTR(PRODUCT)),   /* bLength */
+  .Type                   = USB_DESC_TYPE_STRING,            /* bDescriptorType */
   /* Product: "Keyboard DEMO" */
-  'K', 0, 'e', 0, 'y', 0, 'b', 0, 'o', 0, 'a', 0, 'r', 0, 'd', 0,
-  ' ', 0, 'D', 0, 'E', 0, 'M', 0, 'O', 0
+  .UnicodeString          = USBSTR(PRODUCT)
+
 };
 
 const uint8_t *USBD_StringDescriptors[] = 
 {
   USBD_StringDescriptor_LangID,
-  USBD_StringDescriptor_Manufacturer,
-  USBD_StringDescriptor_Product,
+  (uint8_t *)&USBD_StringDescriptor_Manufacturer,
+  (uint8_t *)&USBD_StringDescriptor_Product
 };
 
 /**

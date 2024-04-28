@@ -29,15 +29,6 @@ static void MatrixTask(void *pvParameters);
 volatile QueueHandle_t xQueueAppEventMsg = NULL;
 volatile SemaphoreHandle_t xMutexUsb = NULL;
 
-void bspInit()
-{
-
-  SystemCoreClock = 48000000;
-  
-  USBD_Init();
-  USBD_Connect();
-}
-
 static bool usbd_resume_flag = false;
 static uint8_t bsp_usbd_resume_signal_flag = 0;
 void bsp_usbd_resume(void) {
@@ -122,9 +113,7 @@ void USBP_WKUP_IRQHandler(void) {
 
 int main(void)
 {
-  bspInit();
-//  SEGGER_RTT_Init();
-  
+
   xQueueAppEventMsg = xQueueCreate(10, 8);
   xMutexUsb = xSemaphoreCreateMutex();
   xTaskCreate(MatrixTask, "Matrix", MatrixTask_STACK_SIZE, NULL, 1, &MatrixTask_Handler);
@@ -132,19 +121,24 @@ int main(void)
   xTaskCreate(USBTask, "USB", USBTask_STACK_SIZE, NULL, 4, &USBTask_Handler);
   /* Start the scheduler. */
   vTaskStartScheduler();
-
+  
   /* Infinite loop */
   while (1)
   {
   }
 }
 
+__attribute__((weak)) void housekeeping_task(void) {
+}
+
+void indicator_light(uint8_t temp);
 static void MatrixTask(void *pvParameters)
 {
   matrix_init();
   while (1)
   {
     matrix_task();
+    housekeeping_task();
     if (usbd_resume_flag) {
       xSemaphoreTake(xMutexUsb, portMAX_DELAY);
       bsp_usbd_resume();

@@ -1,5 +1,12 @@
 #pragma once
 
+#define FW_VERSION 1.0
+#define MANUFACTURER "Your Company" // 键盘制造商
+#define PRODUCT "Keyboard DEMO"     // 键盘名称
+#define VENDOR_ID 0x8888            // USB VID
+#define PRODUCT_ID 0x5A42           // USB PID
+#define DEVICE_VER 0x0100           // 版本号
+
 #define MATRIX_ROW_PINS \
     {A1, A2, A4, A6, A7, B0, B3, B5}
 #define MATRIX_COL_PINS \
@@ -39,6 +46,7 @@
 extern const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 
 enum im_keys {
-  IM_TOFN = 0x7E00
+  IM_TOFN = 0x7E00,
+  IM_TEST
 };
 

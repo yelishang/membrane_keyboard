@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "keycode.h"
 #include "matrix.h"
-
+#include "quantum.h"
 #include "config.h"
 
 
@@ -21,8 +21,44 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         IM_TOFN, KC_SLEP, _______, _______, _______, _______, _______, _______, _______, KC_WSCH, KC_MPRV, KC_MPLY, KC_MNXT,          _______, _______, _______, 
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,                            _______, _______, _______, _______,
-        _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                   _______,          _______, _______, _______,
+        _______, IM_TEST, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                            _______,          _______, _______, _______,
         _______, _______, _______, _______,          _______,                            _______, _______, _______, _______,          _______, _______, _______,          _______, _______, _______
     ),
 };
+extern uint8_t hid_keyboard_out_report_buf[1];
+bool test_flag = false;
+void indicator_light(uint8_t temp);
+uint32_t test_time = 0;
+bool temp = false;
+void housekeeping_task(void) {
+
+  if (test_flag) {
+    if (timer_elapsed32(test_time) > 500) {
+      test_time = timer_read32();
+      temp = !temp ;
+      if (temp) {
+        register_code16(KC_A);
+        indicator_light(0xFF);
+      } else {
+        unregister_code16(KC_A);
+        indicator_light(0x0);
+      }
+    }
+  } else {
+    indicator_light(hid_keyboard_out_report_buf[0]);
+  }
+}
+
+bool process_record_kb(uint16_t keycode, keyevent_t event) {
+    switch (keycode) {
+        case IM_TEST: {
+          if(event.pressed) {
+            test_flag = !test_flag;
+          }
+        } break;
+        default:
+            break;
+    }
+    return true;
+}
