@@ -44,7 +44,7 @@ void bsp_usbd_resume(void) {
 
     PWR->ANAKEY1 = 0x00;
     PWR->ANAKEY2 = 0x00;
-
+ 
     FLASH->ACR      = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY;
     RCC->SYSCLKPRE1 = 0x00;
     RCC->SYSCLKSRC  = RCC_SYSCLKSRC_HSI48;

@@ -8,22 +8,19 @@
 #define DEVICE_VER 0x0100           // 版本号
 
 #define MATRIX_ROW_PINS \
-    {A1, A2, A4, A6, A7, B0, B3, B5}
+    {A3, A6, A7, B0, B1, B2, B4, B5}
 #define MATRIX_COL_PINS \
-    {A11, A14, A15, B15, B14, B13, B12, B9, B8, C5, C4, C3, C2, C1, C0, D4, A3, A0}
-    
-#define SINK_ROWS                  6
+    {A11, A14, A15, B15, B14, B13, B12, B9, B8, C5, C4, C3, C2, C1, C0, D4, A1, A2}
+
 #define MATRIX_ROWS                8
 #define MATRIX_COLS                18
-
-#define LED_MATRIX_LED_COUNT 120
 
 #define DEBOUNCE 1
     
 #define DIODE_DIRECTION COL2ROW
 
 #define NUM_KEYMAP_LAYERS_RAW 2
-    
+
 #define LAYOUT( \
  k4b, k1a, k19, k69, k49, k0h, k45, k62, k12, k13, k03, k43, k23,        k4h, k5h, k6h,                       \
  k1b, k0b, k0a, k09, k07, k17, k16, k06, k05, k02, k04, k14, k15, k63,   k1d, k1c, k1e,    k30, k3d, k3e, k2e,\
